@@ -4550,7 +4550,7 @@ Prefab:
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 426.5
+      value: 431.5
       objectReference: {fileID: 0}
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
@@ -4560,7 +4560,7 @@ Prefab:
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
@@ -4605,6 +4605,17 @@ Prefab:
     - target: {fileID: 1842980798730860, guid: b332fa155ff0b4345a4562c881eb97c2, type: 2}
       propertyPath: m_Name
       value: StandardTurretItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114103407271740452, guid: b332fa155ff0b4345a4562c881eb97c2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97ab1aea1fbcdc549b0fd502bd8b7e38,
+        type: 3}
+    - target: {fileID: 114578907639426836, guid: b332fa155ff0b4345a4562c881eb97c2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PurchaseStandardTurret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b332fa155ff0b4345a4562c881eb97c2, type: 2}
@@ -6967,7 +6978,7 @@ Prefab:
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 536.5
+      value: 531.5
       objectReference: {fileID: 0}
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
@@ -6977,7 +6988,7 @@ Prefab:
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 224359570254733272, guid: b332fa155ff0b4345a4562c881eb97c2,
         type: 2}
