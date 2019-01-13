@@ -5,8 +5,6 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour {
 
 	public static BuildManager instance;
-	public GameObject standardTurretPrefab;
-	public GameObject missileLauncherPrefab;
 	public GameObject buildEffectPrefab;
 
 	private TurretBlueprint turretToBuild;
