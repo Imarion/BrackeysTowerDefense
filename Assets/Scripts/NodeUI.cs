@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NodeUI : MonoBehaviour
 {
 	public GameObject ui;
+	public Text upgradeCost;
 
 	private Node target;
+	public Button upgradeButton;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +26,26 @@ public class NodeUI : MonoBehaviour
 	public void SetTarget(Node _target) {
 		target = _target;
 		transform.position = target.GetBuildPosition ();
+
+		if (!target.isUpgraded) {
+			upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
+			upgradeButton.interactable = true;
+		} else {
+			upgradeCost.text = "MAXED";
+			upgradeButton.interactable = false;
+		}
+
+
 		ui.SetActive (true);
 	}
 
 	public void Hide () {
 		ui.SetActive (false);
+	}
+
+	public void Upgrade() {
+		Debug.Log ("Node ui upgrade");
+		target.UpgradeTurret ();
+		BuildManager.instance.DeselectNode ();
 	}
 }
