@@ -57,9 +57,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d551f4bd152a0be4aaa6a955450b1522, type: 2}
-  - {fileID: 2100000, guid: 279be63716fee1e45914ad81608e77e7, type: 2}
-  - {fileID: 2100000, guid: a2b3ee342a0253140876c6fbae4b66b3, type: 2}
+  - {fileID: 2100000, guid: d0e4070dad44cca45bf307da922d0cb8, type: 2}
+  - {fileID: 2100000, guid: f7c0762895c40aa4e8c18124a424e2ee, type: 2}
+  - {fileID: 2100000, guid: 6601073f5552cb94cb8a1137610f9a03, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 3533017459466146332}
   - component: {fileID: 1871989401}
   m_Layer: 0
-  m_Name: LaserBeamer
+  m_Name: LaserBeamer_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 3533017459466146333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 8103200636217220662}
   - {fileID: 3533017459466178111}
@@ -126,15 +126,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372a07445906fb2448d3731068b7d419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 30
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
   lineRenderer: {fileID: 1871989401}
   impactEffect: {fileID: 8019429219508371666}
   impactLight: {fileID: 4156937929841211352}
-  damageOverTime: 30
-  slowAmount: 0.5
+  damageOverTime: 40
+  slowAmount: 0.8
   enemyTag: Enemy
   partToRotate: {fileID: 3533017459469234563}
   turnSpeed: 10
@@ -181,7 +181,7 @@ LineRenderer:
   - {x: 0, y: 3, z: 5}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.3
+    widthMultiplier: 0.4
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -260,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3533017459466146335}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0.99050784, z: 0}
+  m_LocalPosition: {x: 0, y: -0.07439911, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 63.703358}
   m_Children: []
   m_Father: {fileID: 3533017459466178109}
@@ -291,8 +291,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2e106180c7f772f4cb1976290612db2a, type: 2}
-  - {fileID: 2100000, guid: 5b13b4b04fe17a94db1b08af7fefdfb3, type: 2}
+  - {fileID: 2100000, guid: 2afc59a3b3f97a74cb7c74381c8df2bb, type: 2}
+  - {fileID: 2100000, guid: 609b7c6c089a2064ca220c8dd80194df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3533017459469234560}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.794907, z: 0}
+  m_LocalPosition: {x: 0, y: 1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3533017459466178105}
@@ -385,6 +385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImpactEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047924932657291742, guid: 2942026148928ce4d92016880826b70f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 988837910867245703, guid: 2942026148928ce4d92016880826b70f,
         type: 3}
@@ -439,6 +444,24 @@ PrefabInstance:
     - target: {fileID: 988837910867245703, guid: 2942026148928ce4d92016880826b70f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477336954, guid: 2942026148928ce4d92016880826b70f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477336955, guid: 2942026148928ce4d92016880826b70f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384295523020115705, guid: 2942026148928ce4d92016880826b70f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843893279008724429, guid: 2942026148928ce4d92016880826b70f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

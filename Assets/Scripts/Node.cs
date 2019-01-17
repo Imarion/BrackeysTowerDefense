@@ -96,6 +96,16 @@ public class Node : MonoBehaviour {
 		Debug.Log ("Turret built; Money left: " + PlayerStats.Money);
 	}
 
+	public void SellTurret() {
+		PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+		GameObject buildeffect = (GameObject) Instantiate (buildManager.sellEffectPrefab, GetBuildPosition(), Quaternion.identity);
+		Destroy (buildeffect, 5f);
+
+		Destroy (turret);
+		turretBlueprint = null;
+	}
+
 	void OnMouseEnter() {
 		if (EventSystem.current.IsPointerOverGameObject ())
 			return;
