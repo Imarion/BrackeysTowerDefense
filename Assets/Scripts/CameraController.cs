@@ -25,6 +25,7 @@ public class CameraController : MonoBehaviour {
 			return;
 		}
 
+		/*
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			doMovement = !doMovement;
 		}
@@ -32,6 +33,7 @@ public class CameraController : MonoBehaviour {
 		if (! doMovement) {
 			return;
 		}
+		*/
 
 		if (Input.GetKey ("z") || Input.mousePosition.y >= Screen.height - panBorderThickness) {
 			transform.Translate (Vector3.forward * panSpeed * Time.deltaTime, Space.World);
