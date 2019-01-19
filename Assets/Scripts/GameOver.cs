@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,8 @@ public class GameOver : MonoBehaviour
 {
 
 	public Text roundsText;
+	public SceneFader sceneFader;
+	public String menuSceneName = "MainMenu";
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +29,11 @@ public class GameOver : MonoBehaviour
 	}
 
 	public void Retry() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		sceneFader.FadeTo (SceneManager.GetActiveScene().name);
 	}
 
 	public void Menu() {
+		sceneFader.FadeTo (menuSceneName);
 		Debug.Log ("Go to menu");
 	}
 

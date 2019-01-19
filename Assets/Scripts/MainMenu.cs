@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
 
 	public string levelToLoad = "MainLevel";
+	public SceneFader sceneFader;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class MainMenu : MonoBehaviour
     }
 
 	public void Play() {
-		SceneManager.LoadScene (levelToLoad);
+		sceneFader.FadeTo (levelToLoad);
 	}
 
 	public void Quit() {
