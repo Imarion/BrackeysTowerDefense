@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
 
 	public static bool GameIsOver;
 
+	public string nextLevel = "Level02";
+	public int levelToUnlock = 2;
+
+	public SceneFader sceneFader;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +41,11 @@ public class GameManager : MonoBehaviour
 	void EndGame() {
 		GameIsOver = true;
 		gameOverUI.SetActive (true);
+	}
+
+	public void WinLevel() {
+		Debug.Log ("LEVEL WON !");
+		PlayerPrefs.SetInt ("levelReached", levelToUnlock);
+		sceneFader.FadeTo (nextLevel);
 	}
 }

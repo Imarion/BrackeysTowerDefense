@@ -4922,6 +4922,7 @@ MonoBehaviour:
   timeBetweenWaves: 3
   timeBetweenEnemies: 0.5
   waveCountDownText: {fileID: 987800021}
+  gameManager: {fileID: 635525347}
 --- !u!4 &635525344
 Transform:
   m_ObjectHideFlags: 0
@@ -4980,6 +4981,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1157175774}
+  nextLevel: Level02
+  levelToUnlock: 2
+  sceneFader: {fileID: 1332950601237544346}
 --- !u!95 &635525348
 Animator:
   serializedVersion: 3
